@@ -25,6 +25,14 @@ import (
 	"github.com/apex/log"
 )
 
+type SolutionType string
+
+const (
+	ComponentSolutionType SolutionType = "component"
+	ModuleSolutionType    SolutionType = "module"
+	AppSolutionType       SolutionType = "app"
+)
+
 type Manifest struct {
 	ManifestVersion string         `json:"manifestVersion,omitempty"`
 	Name            string         `json:"name,omitempty"`
